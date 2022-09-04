@@ -1,0 +1,47 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 5rem;
+    background-color: #f8f8f8;
+    box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+
+}
+
+.heading {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    background: -webkit-linear-gradient(#f14848, rgb(68, 63, 63));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    ;
+}
+
+.cart-container img {
+    position: relative;
+}
+
+.cart-total {
+    position: absolute;
+    top: 2px;
+    right: 22px;
+    font-size: .87rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#f14848, rgb(68, 63, 63));
+
+    color: #fff;
+    width: auto;
+    height: 35px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
