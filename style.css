@@ -115,7 +115,8 @@ nav {
     font-weight: 600;
 }
 
-.btn-container button {
+.btn-container button,
+.remove {
     background-color: transparent;
     border: transparent;
     font-size: 1.2rem;
@@ -124,4 +125,55 @@ nav {
 
 .quantity {
     font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Cart page */
+
+
+.cart-center {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 2rem;
+    width: 85vw;
+    margin: 20px auto;
+    justify-items: center;
+}
+
+.shoes-card {
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem 2.5rem;
+    transition: all 0.3s linear;
+}
+
+.shoes-card:hover {
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .75rem;
+}
+
+.item-total {
+    margin-top: 1rem;
+}
+
+.cart-item-price {
+    background: #000000;
+    color: #fff;
+    padding: .5rem;
+    font-weight: 400;
+}
+
+.remove {
+    font-weight: 600;
+    color: #f14848;
 }
