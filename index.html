@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="app.js" defer></script>
     <title>Shoe store</title>
 </head>
@@ -13,13 +16,18 @@
 <body>
     <nav>
         <h1 class="heading">shoe store</h1>
-        <div class="cart-container">
+        <div class="cart-total-container">
             <img src="img/shopping-cart-svg.svg" alt="">
-            <span class="cart-total">10000</span>
+            <span class="cart-total" id="cart-total">10000</span>
         </div>
-
     </nav>
-
+    <main>
+        <section class="cart-section">
+            <h2 class="product-section-heading">all the latest products</h2>
+            <div class="product-center" id="product-list">
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
