@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="productData.js" defer></script>
     <script src="app.js" defer></script>
     <title>Shoe store</title>
 </head>
@@ -16,14 +17,16 @@
 <body>
     <nav>
         <h1 class="heading">shoe store</h1>
-        <div class="cart-total-container">
-            <img src="img/shopping-cart-svg.svg" alt="">
-            <span class="cart-total" id="cart-total">0</span>
-        </div>
+        <a href="cart.html">
+            <div class="cart-total-container">
+                <img src="img/shopping-cart-svg.svg" alt="">
+                <span class="cart-total" id="cart-total">0</span>
+            </div>
+        </a>
     </nav>
     <main>
         <section class="cart-section">
-            <h2 class="product-section-heading">all the latest products</h2>
+            <h2 class="product-section-heading">Cart</h2>
             <div class="product-center" id="product-list">
             </div>
         </section>

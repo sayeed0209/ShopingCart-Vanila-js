@@ -1,0 +1,51 @@
+const data = [
+	{
+		id: 1,
+		name: 'product 1',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum natus harum ullam temp',
+		price: 59,
+		img: 'img/shoe-1.jpg',
+	},
+	{
+		id: 2,
+		name: 'product 2',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum natus harum ullam temp',
+		price: 59,
+		img: 'img/shoe-2.jpg',
+	},
+	{
+		id: 3,
+		name: 'product 3',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum natus harum ullam temp',
+		price: 59,
+		img: 'img/shoe-3.jpg',
+	},
+	{
+		id: 4,
+		name: 'product 4',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum natus harum ullam temp',
+		price: 59,
+		img: 'img/shoe-4.jpg',
+	},
+	{
+		id: 5,
+		name: 'product 5',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum natus harum ullam temp',
+		price: 59,
+		img: 'img/shoe-5.jpg',
+	},
+	{
+		id: 6,
+		name: 'product 6',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum natus harum ullam temp',
+		price: 59,
+		img: 'img/shoe-6.jpg',
+	},
+	{
+		id: 7,
+		name: 'product 7',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum natus harum ullam temp',
+		price: 59,
+		img: 'img/shoe-7.jpg',
+	},
+];
