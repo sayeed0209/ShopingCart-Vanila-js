@@ -86,8 +86,8 @@ let increment = id => {
 	} else {
 		search.item += 1;
 	}
-	localStorage.setItem('cartItem', JSON.stringify(basket));
 	updateProductItem(id);
+	localStorage.setItem('cartItem', JSON.stringify(basket));
 };
 function decrement(id) {
 	const search = basket.find(x => x.id === id);
@@ -99,8 +99,9 @@ function decrement(id) {
 	} else {
 		search.item -= 1;
 	}
-	localStorage.setItem('cartItem', JSON.stringify(basket));
 	updateProductItem(id);
+	basket = basket.filter(x => x.item !== 0);
+	localStorage.setItem('cartItem', JSON.stringify(basket));
 }
 function updateProductItem(id) {
 	const search = basket.find(x => x.id === id);
