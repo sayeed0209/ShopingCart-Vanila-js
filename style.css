@@ -45,7 +45,6 @@ nav {
     background: -webkit-linear-gradient(#f14848, rgb(68, 63, 63));
     color: #fff;
     width: auto;
-    border-radius: 50%;
     display: grid;
     place-items: center;
 }
@@ -108,7 +107,7 @@ nav {
 .product-price-and-btn {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    margin: 1rem 0;
 }
 
 .price {

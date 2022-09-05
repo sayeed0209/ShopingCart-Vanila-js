@@ -49,10 +49,13 @@ const data = [
 		img: 'img/shoe-7.jpg',
 	},
 ];
+let basket = JSON.parse(localStorage.getItem('cartItem')) || [];
 const productList = document.querySelector('#product-list');
 const products = data
 	.map(item => {
 		const { id, name, desc, price, img } = item;
+		let search = basket.find(item => item.id === id) || [];
+		console.log(search);
 		return `<article class="products">
     <div class="product-img">
         <img src=${img} alt=${name}/>
@@ -63,7 +66,9 @@ const products = data
     <p class="price">$${price}</p>
         <div class="btn-container">
             <button onclick="increment(${id})"><i class="fa-solid fa-plus"></i></button>
-            <span class="quantity" id=${id}>0</span>
+            <span class="quantity" id=${id}>${
+			search.item === undefined ? 0 : search.item
+		}</span>
             <button onclick="decrement(${id})"><i class="fa-solid fa-minus"></i></button>
         </div>
     </div>
@@ -73,7 +78,6 @@ const products = data
 
 productList.innerHTML = products;
 
-const basket = [];
 let increment = id => {
 	const search = basket.find(x => x.id === id);
 
@@ -82,6 +86,7 @@ let increment = id => {
 	} else {
 		search.item += 1;
 	}
+	localStorage.setItem('cartItem', JSON.stringify(basket));
 	updateProductItem(id);
 };
 function decrement(id) {
@@ -94,15 +99,21 @@ function decrement(id) {
 	} else {
 		search.item -= 1;
 	}
+	localStorage.setItem('cartItem', JSON.stringify(basket));
 	updateProductItem(id);
 }
 function updateProductItem(id) {
 	const search = basket.find(x => x.id === id);
 	document.getElementById(id).innerHTML = search.item;
+	calculateCartItem();
+}
+
+const calculateCartItem = () => {
 	if (basket.length > 0) {
 		const total = basket.reduce((acc, curr) => {
 			return acc + curr.item;
 		}, 0);
 		document.getElementById('cart-total').innerHTML = total;
 	}
-}
+};
+calculateCartItem();
