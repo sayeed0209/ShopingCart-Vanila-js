@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Helvetica Neue", Helvetica;
+    font-size: 1rem;
+}
+
 nav {
     height: 5rem;
     background-color: #f8f8f8;
@@ -13,7 +18,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+    padding: 1rem;
 
 }
 
@@ -26,7 +31,7 @@ nav {
     ;
 }
 
-.cart-container img {
+.cart-total-container img {
     position: relative;
 }
 
@@ -35,13 +40,89 @@ nav {
     top: 2px;
     right: 22px;
     font-size: .87rem;
+    padding: 0.5rem;
     font-weight: bold;
     background: -webkit-linear-gradient(#f14848, rgb(68, 63, 63));
-
     color: #fff;
     width: auto;
-    height: 35px;
     border-radius: 50%;
     display: grid;
     place-items: center;
+}
+
+/* nav end here */
+
+/* main */
+.product-section-heading {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    background: -webkit-linear-gradient(#3866e2, rgb(68, 63, 63));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cart-section {
+    width: 95vw;
+    margin: 20px auto;
+
+}
+
+.product-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 4rem;
+    width: 85vw;
+    margin: 20px auto;
+
+}
+
+.products {
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    transition: all .3s linear;
+}
+
+.products:hover {
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.product-img {
+    width: 300px;
+    height: 250px;
+}
+
+.product-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+    text-transform: capitalize;
+}
+
+.product-price-and-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.btn-container button {
+    background-color: transparent;
+    border: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.quantity {
+    font-size: 1.5rem;
 }
