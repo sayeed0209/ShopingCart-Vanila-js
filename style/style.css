@@ -33,6 +33,7 @@ nav {
 
 .cart-total-container img {
     position: relative;
+    cursor: pointer;
 }
 
 .cart-total {
