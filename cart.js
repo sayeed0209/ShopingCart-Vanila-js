@@ -31,14 +31,16 @@ let generateCartItem = () => {
                             <span class="quantity" id=${id}>${item}</span>
                             <button onclick="decrement(${id})"><i class="fa-solid fa-minus"></i></button>
                         </div>
-                        <p class="item-total">${item * price}</p>
+                        <p class="item-total">$${item * price}</p>
                         </div>
                     </article>`;
 			})
 			.join(''));
 	} else {
 		cartCenter.innerHTML = '';
-		cartLabel.innerHTML = 'cart is empty';
+		cartLabel.innerHTML = `<h2>Cart is empty</h2>
+            <a  class="back-home-btn" href="index.html">Go Back Home</a>
+        `;
 	}
 };
 generateCartItem();
@@ -101,6 +103,13 @@ const cartTotal = () => {
 				return item * search.price;
 			})
 			.reduce((x, y) => x + y, 0);
-		console.log(amount);
+		cartLabel.innerHTML = `
+            <h4 class="total-amount">Total: $${amount}</h4>
+            <button class="clear-cart" onclick=clearCart()>Clear Cart</button>
+            
+            `;
+	} else {
+		return;
 	}
 };
+cartTotal();

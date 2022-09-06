@@ -116,7 +116,8 @@ nav {
 }
 
 .btn-container button,
-.remove {
+.remove,
+.clear-cart {
     background-color: transparent;
     border: transparent;
     font-size: 1.2rem;
@@ -137,17 +138,18 @@ a {
 .cart-center {
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
-    grid-gap: 2rem;
-    width: 85vw;
+    grid-gap: 0.5rem;
     margin: 20px auto;
     justify-items: center;
+    padding: .5rem;
+    width: 95vw;
 }
 
 .shoes-card {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-    padding: 1.5rem 2.5rem;
+    padding: 1.5rem 1.5rem;
     transition: all 0.3s linear;
 }
 
@@ -176,4 +178,47 @@ a {
 .remove {
     font-weight: 600;
     color: #f14848;
+}
+
+.label {
+    text-align: center;
+}
+
+.total-amount {
+    font-size: 1.5rem;
+}
+
+.item-total {
+    font-size: 1.2rem;
+}
+
+.clear-cart {
+    background-color: #f14848;
+    color: #fff;
+    padding: .5rem;
+    border-radius: .25rem;
+    transition: all 0.3s linear;
+    margin-top: .5rem;
+}
+
+.clear-cart:hover,
+.back-home-btn:hover {
+    background-color: #3f3e3e
+}
+
+.back-home-btn {
+    display: inline-block;
+    background-color: #0c0c0c;
+    color: #fff;
+    padding: .5rem;
+    border-radius: .25rem;
+    transition: all 0.3s linear;
+    margin-top: .5rem;
+}
+
+@media screen and (min-width: 800px) {
+    .cart-center {
+        padding: 1.5rem;
+        width: 40vw;
+    }
 }
