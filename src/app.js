@@ -1,11 +1,10 @@
-
 let basket = JSON.parse(localStorage.getItem('cartItem')) || [];
 const productList = document.querySelector('#product-list');
 const products = data
 	.map(item => {
 		const { id, name, desc, price, img } = item;
 		let search = basket.find(item => item.id === id) || [];
-		console.log(search);
+
 		return `<article class="products">
     <div class="product-img">
         <img src=${img} alt=${name}/>
@@ -26,8 +25,10 @@ const products = data
 	})
 	.join('');
 
+// generating products
 productList.innerHTML = products;
 
+// increment product
 let increment = id => {
 	const search = basket.find(x => x.id === id);
 
@@ -39,6 +40,7 @@ let increment = id => {
 	updateProductItem(id);
 	localStorage.setItem('cartItem', JSON.stringify(basket));
 };
+// increment product
 function decrement(id) {
 	const search = basket.find(x => x.id === id);
 
@@ -53,12 +55,14 @@ function decrement(id) {
 	basket = basket.filter(x => x.item !== 0);
 	localStorage.setItem('cartItem', JSON.stringify(basket));
 }
+// update total basket item
 function updateProductItem(id) {
 	const search = basket.find(x => x.id === id);
 	document.getElementById(id).innerHTML = search.item;
 	calculateCartItem();
 }
 
+// calculate total basket item
 const calculateCartItem = () => {
 	if (basket.length > 0) {
 		const total = basket.reduce((acc, curr) => {
